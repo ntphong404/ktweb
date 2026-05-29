@@ -1,0 +1,28 @@
+# Cấu hình bỏ qua các thư mục sinh ra tự động để không push lên GitHub
+
+# Thư mục chứa thư viện Node.js (cực kỳ nặng, không bao giờ được commit)
+node_modules/
+
+# Thư mục chứa báo cáo kết quả test của Playwright
+playwright-report/
+
+# Thư mục chứa file ghi hình, chụp ảnh lỗi (nếu cấu hình)
+test-results/
+
+# Các file cache của Playwright
+.playwright-cache/
+
+# Các file log lỗi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Môi trường và cấu hình cá nhân
+.env
+.env.test
+
+# Thư mục IDE/Hệ điều hành
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

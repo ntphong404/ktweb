@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full-Fledged website for Automation Practice">
+    <meta name="robots" content="index" />
+    <meta name="keywords"
+        content="Automation Exercise / Automation Practice / Practice website for automation / demo website for practice / dummy website for testing / testing website / dummy website for practice automation / API Testing / API automation">
+    <meta name="google-site-verification" content="VS1KtEV7m0Pp9MRMwCpyR7rGwUVYH6N8l1zoVepsGWs" />
+
+    <title>Automation Practice Website for UI Testing - Test Cases</title>
+
+
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="/static/images/home/short_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="/static/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="/static/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="/static/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1677597403311019"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="/"><img src="/static/images/home/logo.png"
+                                    alt="Website for practice automation" /></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="/products"><i class="material-icons card_travel"
+                                            style="font-size: 16px;">&#xe8f8;</i> Products</a></li>
+                                <li><a href="/view_cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+                                <li><a href="/login"><i class="fa fa-lock"></i> Signup / Login</a></li>
+
+                                <li><a href="/test_cases" style="color: orange;"><i class="fa fa-list"></i> Test
+                                        Cases</a></li>
+                                <li><a href="/api_list"><i class="fa fa-list"></i> API Testing</a></li>
+                                <li><a href="https://www.youtube.com/c/AutomationExercise"><i
+                                            class="fa fa-youtube-play"></i> Video Tutorials</a></li>
+                                <li><a href="/contact_us"><i class="fa fa-envelope"></i> Contact us</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="form" style="margin-top: 100px !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-1">
+                    <h2 class="title text-center"><b>Test Cases</b></h2>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <h5><span style="color: red;">Below is the list of test Cases for you to practice the Automation. Click
+                        on the scenario for detailed Test Steps:</span></h5>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1"><u>Test Case 1: Register User</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Signup / Login' button</li>
+                            <li class="list-group-item">5. Verify 'New User Signup!' is visible</li>
+                            <li class="list-group-item">6. Enter name and email address</li>
+                            <li class="list-group-item">7. Click 'Signup' button</li>
+                            <li class="list-group-item">8. Verify that 'ENTER ACCOUNT INFORMATION' is visible</li>
+                            <li class="list-group-item">9. Fill details: Title, Name, Email, Password, Date of birth
+                            </li>
+                            <li class="list-group-item">10. Select checkbox 'Sign up for our newsletter!'</li>
+                            <li class="list-group-item">11. Select checkbox 'Receive special offers from our partners!'
+                            </li>
+                            <li class="list-group-item">12. Fill details: First name, Last name, Company, Address,
+                                Address2, Country, State, City, Zipcode, Mobile Number</li>
+                            <li class="list-group-item">13. Click 'Create Account button'</li>
+                            <li class="list-group-item">14. Verify that 'ACCOUNT CREATED!' is visible</li>
+                            <li class="list-group-item">15. Click 'Continue' button</li>
+                            <li class="list-group-item">16. Verify that 'Logged in as username' is visible</li>
+                            <li class="list-group-item">17. Click 'Delete Account' button</li>
+                            <li class="list-group-item">18. Verify that 'ACCOUNT DELETED!' is visible and click
+                                'Continue' button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2"><u>Test Case 2: Login User with correct email
+                                    and password</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Signup / Login' button</li>
+                            <li class="list-group-item">5. Verify 'Login to your account' is visible</li>
+                            <li class="list-group-item">6. Enter correct email address and password</li>
+                            <li class="list-group-item">7. Click 'login' button</li>
+                            <li class="list-group-item">8. Verify that 'Logged in as username' is visible</li>
+                            <li class="list-group-item">9. Click 'Delete Account' button</li>
+                            <li class="list-group-item">10. Verify that 'ACCOUNT DELETED!' is visible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse3"><u>Test Case 3: Login User with incorrect email
+                                    and password</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Signup / Login' button</li>
+                            <li class="list-group-item">5. Verify 'Login to your account' is visible</li>
+                            <li class="list-group-item">6. Enter incorrect email address and password</li>
+                            <li class="list-group-item">7. Click 'login' button</li>
+                            <li class="list-group-item">8. Verify error 'Your email or password is incorrect!' is
+                                visible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse4"><u>Test Case 4: Logout User</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Signup / Login' button</li>
+                            <li class="list-group-item">5. Verify 'Login to your account' is visible</li>
+                            <li class="list-group-item">6. Enter correct email address and password</li>
+                            <li class="list-group-item">7. Click 'login' button</li>
+                            <li class="list-group-item">8. Verify that 'Logged in as username' is visible</li>
+                            <li class="list-group-item">9. Click 'Logout' button</li>
+                            <li class="list-group-item">10. Verify that user is navigated to login page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse5"><u>Test Case 5: Register User with existing
+                                    email</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Signup / Login' button</li>
+                            <li class="list-group-item">5. Verify 'New User Signup!' is visible</li>
+                            <li class="list-group-item">6. Enter name and already registered email address</li>
+                            <li class="list-group-item">7. Click 'Signup' button</li>
+                            <li class="list-group-item">8. Verify error 'Email Address already exist!' is visible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse6"><u>Test Case 6: Contact Us Form</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Contact Us' button</li>
+                            <li class="list-group-item">5. Verify 'GET IN TOUCH' is visible</li>
+                            <li class="list-group-item">6. Enter name, email, subject and message</li>
+                            <li class="list-group-item">7. Upload file</li>
+                            <li class="list-group-item">8. Click 'Submit' button</li>
+                            <li class="list-group-item">9. Click OK button</li>
+                            <li class="list-group-item">10. Verify success message 'Success! Your details have been
+                                submitted successfully.' is visible</li>
+                            <li class="list-group-item">11. Click 'Home' button and verify that landed to home page
+                                successfully</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse7"><u>Test Case 7: Verify Test Cases Page</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Test Cases' button</li>
+                            <li class="list-group-item">5. Verify user is navigated to test cases page successfully</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse8"><u>Test Case 8: Verify All Products and product
+                                    detail page</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Products' button</li>
+                            <li class="list-group-item">5. Verify user is navigated to ALL PRODUCTS page successfully
+                            </li>
+                            <li class="list-group-item">6. The products list is visible</li>
+                            <li class="list-group-item">7. Click on 'View Product' of first product</li>
+                            <li class="list-group-item">8. User is landed to product detail page</li>
+                            <li class="list-group-item">9. Verify that detail detail is visible: product name, category,
+                                price, availability, condition, brand</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse9"><u>Test Case 9: Search Product</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click on 'Products' button</li>
+                            <li class="list-group-item">5. Verify user is navigated to ALL PRODUCTS page successfully
+                            </li>
+                            <li class="list-group-item">6. Enter product name in search input and click search button
+                            </li>
+                            <li class="list-group-item">7. Verify 'SEARCHED PRODUCTS' is visible</li>
+                            <li class="list-group-item">8. Verify all the products related to search are visible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse10"><u>Test Case 10: Verify Subscription in home
+                                    page</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Scroll down to footer</li>
+                            <li class="list-group-item">5. Verify text 'SUBSCRIPTION'</li>
+                            <li class="list-group-item">6. Enter email address in input and click arrow button</li>
+                            <li class="list-group-item">7. Verify success message 'You have been successfully
+                                subscribed!' is visible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse11"><u>Test Case 11: Verify Subscription in Cart
+                                    page</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse11" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click 'Cart' button</li>
+                            <li class="list-group-item">5. Scroll down to footer</li>
+                            <li class="list-group-item">6. Verify text 'SUBSCRIPTION'</li>
+                            <li class="list-group-item">7. Enter email address in input and click arrow button</li>
+                            <li class="list-group-item">8. Verify success message 'You have been successfully
+                                subscribed!' is visible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse12"><u>Test Case 12: Add Products in Cart</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click 'Products' button</li>
+                            <li class="list-group-item">5. Hover over first product and click 'Add to cart'</li>
+                            <li class="list-group-item">6. Click 'Continue Shopping' button</li>
+                            <li class="list-group-item">7. Hover over second product and click 'Add to cart'</li>
+                            <li class="list-group-item">8. Click 'View Cart' button</li>
+                            <li class="list-group-item">9. Verify both products are added to Cart</li>
+                            <li class="list-group-item">10. Verify their prices, quantity and total price</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse13"><u>Test Case 13: Verify Product quantity in
+                                    Cart</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse13" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click 'View Product' for any product on home page</li>
+                            <li class="list-group-item">5. Verify product detail is opened</li>
+                            <li class="list-group-item">6. Increase quantity to 4</li>
+                            <li class="list-group-item">7. Click 'Add to cart' button</li>
+                            <li class="list-group-item">8. Click 'View Cart' button</li>
+                            <li class="list-group-item">9. Verify that product is displayed in cart page with exact
+                                quantity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse14"><u>Test Case 14: Place Order: Register while
+                                    Checkout</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse14" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Add products to cart</li>
+                            <li class="list-group-item">5. Click 'Cart' button</li>
+                            <li class="list-group-item">6. Verify that cart page is displayed</li>
+                            <li class="list-group-item">7. Click Proceed To Checkout</li>
+                            <li class="list-group-item">8. Click 'Register / Login' button </li>
+                            <li class="list-group-item">9. Fill all details in Signup and create account</li>
+                            <li class="list-group-item">10. Verify 'ACCOUNT CREATED!' and click 'Continue' button</li>
+                            <li class="list-group-item">11. Verify ' Logged in as username' at top</li>
+                            <li class="list-group-item">12.Click 'Cart' button</li>
+                            <li class="list-group-item">13. Click 'Proceed To Checkout' button</li>
+                            <li class="list-group-item">14. Verify Address Details and Review Your Order</li>
+                            <li class="list-group-item">15. Enter description in comment text area and click 'Place
+                                Order'</li>
+                            <li class="list-group-item">16. Enter payment details: Name on Card, Card Number, CVC,
+                                Expiration date</li>
+                            <li class="list-group-item">17. Click 'Pay and Confirm Order' button</li>
+                            <li class="list-group-item">18. Verify success message 'Your order has been placed
+                                successfully!'</li>
+                            <li class="list-group-item">19. Click 'Delete Account' button</li>
+                            <li class="list-group-item">20. Verify 'ACCOUNT DELETED!' and click 'Continue' button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse15"><u>Test Case 15: Place Order: Register before
+                                    Checkout</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse15" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click 'Signup / Login' button </li>
+                            <li class="list-group-item">5. Fill all details in Signup and create account</li>
+                            <li class="list-group-item">6. Verify 'ACCOUNT CREATED!' and click 'Continue' button</li>
+                            <li class="list-group-item">7. Verify ' Logged in as username' at top</li>
+                            <li class="list-group-item">8. Add products to cart</li>
+                            <li class="list-group-item">9. Click 'Cart' button</li>
+                            <li class="list-group-item">10. Verify that cart page is displayed</li>
+                            <li class="list-group-item">11. Click Proceed To Checkout</li>
+                            <li class="list-group-item">12. Verify Address Details and Review Your Order</li>
+                            <li class="list-group-item">13. Enter description in comment text area and click 'Place
+                                Order'</li>
+                            <li class="list-group-item">14. Enter payment details: Name on Card, Card Number, CVC,
+                                Expiration date</li>
+                            <li class="list-group-item">15. Click 'Pay and Confirm Order' button</li>
+                            <li class="list-group-item">16. Verify success message 'Your order has been placed
+                                successfully!'</li>
+                            <li class="list-group-item">17. Click 'Delete Account' button</li>
+                            <li class="list-group-item">18. Verify 'ACCOUNT DELETED!' and click 'Continue' button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse16"><u>Test Case 16: Place Order: Login before
+                                    Checkout</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse16" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click 'Signup / Login' button </li>
+                            <li class="list-group-item">5. Fill email, password and click 'Login' button</li>
+                            <li class="list-group-item">6. Verify 'Logged in as username' at top</li>
+                            <li class="list-group-item">7. Add products to cart</li>
+                            <li class="list-group-item">8. Click 'Cart' button</li>
+                            <li class="list-group-item">9. Verify that cart page is displayed</li>
+                            <li class="list-group-item">10. Click Proceed To Checkout</li>
+                            <li class="list-group-item">11. Verify Address Details and Review Your Order</li>
+                            <li class="list-group-item">12. Enter description in comment text area and click 'Place
+                                Order'</li>
+                            <li class="list-group-item">13. Enter payment details: Name on Card, Card Number, CVC,
+                                Expiration date</li>
+                            <li class="list-group-item">14. Click 'Pay and Confirm Order' button</li>
+                            <li class="list-group-item">15. Verify success message 'Your order has been placed
+                                successfully!'</li>
+                            <li class="list-group-item">16. Click 'Delete Account' button</li>
+                            <li class="list-group-item">17. Verify 'ACCOUNT DELETED!' and click 'Continue' button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse17"><u>Test Case 17: Remove Products From
+                                    Cart</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse17" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Add products to cart</li>
+                            <li class="list-group-item">5. Click 'Cart' button</li>
+                            <li class="list-group-item">6. Verify that cart page is displayed</li>
+                            <li class="list-group-item">7. Click 'X' button corresponding to particular product</li>
+                            <li class="list-group-item">8. Verify that product is removed from the cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse18"><u>Test Case 18: View Category Products</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse18" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that categories are visible on left side bar</li>
+                            <li class="list-group-item">4. Click on 'Women' category</li>
+                            <li class="list-group-item">5. Click on any category link under 'Women' category, for
+                                example: Dress</li>
+                            <li class="list-group-item">6. Verify that category page is displayed and confirm text
+                                'WOMEN - TOPS PRODUCTS'</li>
+                            <li class="list-group-item">7. On left side bar, click on any sub-category link of 'Men'
+                                category</li>
+                            <li class="list-group-item">8. Verify that user is navigated to that category page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse19"><u>Test Case 19: View & Cart Brand
+                                    Products</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse19" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Click on 'Products' button</li>
+                            <li class="list-group-item">4. Verify that Brands are visible on left side bar</li>
+                            <li class="list-group-item">5. Click on any brand name</li>
+                            <li class="list-group-item">6. Verify that user is navigated to brand page and brand
+                                products are displayed</li>
+                            <li class="list-group-item">7. On left side bar, click on any other brand link</li>
+                            <li class="list-group-item">8. Verify that user is navigated to that brand page and can see
+                                products</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse20"><u>Test Case 20: Search Products and Verify
+                                    Cart After Login</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse20" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Click on 'Products' button</li>
+                            <li class="list-group-item">4. Verify user is navigated to ALL PRODUCTS page successfully
+                            </li>
+                            <li class="list-group-item">5. Enter product name in search input and click search button
+                            </li>
+                            <li class="list-group-item">6. Verify 'SEARCHED PRODUCTS' is visible</li>
+                            <li class="list-group-item">7. Verify all the products related to search are visible</li>
+                            <li class="list-group-item">8. Add those products to cart</li>
+                            <li class="list-group-item">9. Click 'Cart' button and verify that products are visible in
+                                cart</li>
+                            <li class="list-group-item">10. Click 'Signup / Login' button and submit login details</li>
+                            <li class="list-group-item">11. Again, go to Cart page</li>
+                            <li class="list-group-item">12. Verify that those products are visible in cart after login
+                                as well</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse21"><u>Test Case 21: Add review on product</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse21" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Click on 'Products' button</li>
+                            <li class="list-group-item">4. Verify user is navigated to ALL PRODUCTS page successfully
+                            </li>
+                            <li class="list-group-item">5. Click on 'View Product' button</li>
+                            <li class="list-group-item">6. Verify 'Write Your Review' is visible</li>
+                            <li class="list-group-item">7. Enter name, email and review</li>
+                            <li class="list-group-item">8. Click 'Submit' button</li>
+                            <li class="list-group-item">9. Verify success message 'Thank you for your review.'</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse22"><u>Test Case 22: Add to cart from Recommended
+                                    items</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse22" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Scroll to bottom of page</li>
+                            <li class="list-group-item">4. Verify 'RECOMMENDED ITEMS' are visible</li>
+                            <li class="list-group-item">5. Click on 'Add To Cart' on Recommended product</li>
+                            <li class="list-group-item">6. Click on 'View Cart' button</li>
+                            <li class="list-group-item">7. Verify that product is displayed in cart page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse23"><u>Test Case 23: Verify address details in
+                                    checkout page</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse23" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Click 'Signup / Login' button</li>
+                            <li class="list-group-item">5. Fill all details in Signup and create account</li>
+                            <li class="list-group-item">6. Verify 'ACCOUNT CREATED!' and click 'Continue' button</li>
+                            <li class="list-group-item">7. Verify ' Logged in as username' at top</li>
+                            <li class="list-group-item">8. Add products to cart</li>
+                            <li class="list-group-item">9. Click 'Cart' button</li>
+                            <li class="list-group-item">10. Verify that cart page is displayed</li>
+                            <li class="list-group-item">11. Click Proceed To Checkout</li>
+                            <li class="list-group-item">12. Verify that the delivery address is same address filled at
+                                the time registration of account</li>
+                            <li class="list-group-item">13. Verify that the billing address is same address filled at
+                                the time registration of account</li>
+                            <li class="list-group-item">14. Click 'Delete Account' button</li>
+                            <li class="list-group-item">15. Verify 'ACCOUNT DELETED!' and click 'Continue' button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse24"><u>Test Case 24: Download Invoice after
+                                    purchase order</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse24" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Add products to cart</li>
+                            <li class="list-group-item">5. Click 'Cart' button</li>
+                            <li class="list-group-item">6. Verify that cart page is displayed</li>
+                            <li class="list-group-item">7. Click Proceed To Checkout</li>
+                            <li class="list-group-item">8. Click 'Register / Login' button </li>
+                            <li class="list-group-item">9. Fill all details in Signup and create account</li>
+                            <li class="list-group-item">10. Verify 'ACCOUNT CREATED!' and click 'Continue' button</li>
+                            <li class="list-group-item">11. Verify ' Logged in as username' at top</li>
+                            <li class="list-group-item">12.Click 'Cart' button</li>
+                            <li class="list-group-item">13. Click 'Proceed To Checkout' button</li>
+                            <li class="list-group-item">14. Verify Address Details and Review Your Order</li>
+                            <li class="list-group-item">15. Enter description in comment text area and click 'Place
+                                Order'</li>
+                            <li class="list-group-item">16. Enter payment details: Name on Card, Card Number, CVC,
+                                Expiration date</li>
+                            <li class="list-group-item">17. Click 'Pay and Confirm Order' button</li>
+                            <li class="list-group-item">18. Verify success message 'Your order has been placed
+                                successfully!'</li>
+                            <li class="list-group-item">19. Click 'Download Invoice' button and verify invoice is
+                                downloaded successfully.</li>
+                            <li class="list-group-item">20. Click 'Continue' button</li>
+                            <li class="list-group-item">21. Click 'Delete Account' button</li>
+                            <li class="list-group-item">22. Verify 'ACCOUNT DELETED!' and click 'Continue' button</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse25"><u>Test Case 25: Verify Scroll Up using 'Arrow'
+                                    button and Scroll Down functionality</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse25" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Scroll down page to bottom</li>
+                            <li class="list-group-item">5. Verify 'SUBSCRIPTION' is visible</li>
+                            <li class="list-group-item">6. Click on arrow at bottom right side to move upward</li>
+                            <li class="list-group-item">7. Verify that page is scrolled up and 'Full-Fledged practice
+                                website for Automation Engineers' text is visible on screen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse26"><u>Test Case 26: Verify Scroll Up without
+                                    'Arrow' button and Scroll Down functionality</u></a>
+                        </h4>
+                    </div>
+                    <div id="collapse26" class="panel-collapse collapse">
+                        <ul class="list-group">
+                            <li class="list-group-item">1. Launch browser</li>
+                            <li class="list-group-item">2. Navigate to url <a
+                                    href="https://automationexercise.com">'http://automationexercise.com'</a></li>
+                            <li class="list-group-item">3. Verify that home page is visible successfully</li>
+                            <li class="list-group-item">4. Scroll down page to bottom</li>
+                            <li class="list-group-item">5. Verify 'SUBSCRIPTION' is visible</li>
+                            <li class="list-group-item">6. Scroll up page to top</li>
+                            <li class="list-group-item">7. Verify that page is scrolled up and 'Full-Fledged practice
+                                website for Automation Engineers' text is visible on screen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#feedback">Feedback for Us</a>
+                        </h4>
+                    </div>
+                    <div id="feedback" class="panel-collapse collapse in">
+                        <ul class="list-group">
+                            <li class="list-group-item">We have identified above scenarios and added in the list.</li>
+                            <li class="list-group-item">You can explore more test cases in the website and if you find
+                                new test scenario that is not covered in above list, do let us know. We will definitely
+                                add that in above list.</li>
+                            <li class="list-group-item">If you think, this website should cover up any particular
+                                feature, kindly share with us at <a
+                                    href="/cdn-cgi/l/email-protection#721417171610131119321307061d1f13061b1d1c170a1700111b01175c111d1f"><u><span
+                                            class="__cf_email__"
+                                            data-cfemail="2c4a4949484e4d4f476c4d595843414d584543424954495e4f455f49024f4341">[email&#160;protected]</span></u></a>.
+                                We will work on that part. Your feedback matters a lot.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class='form-row'>
+                        <div class='col-md-9 hide form-group' id="success-subscribe">
+                            <div class='alert-success alert'>You have been successfully subscribed!</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="single-widget">
+                            <h2>Subscription</h2>
+                            <form class="searchform" method="POST">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="Dp9AwibxlxXehFQb6L7NcztCumfgSmkiZQ75vgHKX6hBZDO64f7i9UivXX4RD3HH">
+                                <input type="email" id="susbscribe_email" required placeholder="Your email address" />
+                                <button type="submit" id="subscribe" class="btn btn-default"><i
+                                        class="fa fa-arrow-circle-o-right"></i></button>
+                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2021 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery.scrollUp.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/subscription.js"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447"
+        integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ=="
+        data-cf-beacon='{"version":"2024.11.0","token":"cd4e8a3390ec4a29b8f61484a473eff3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
