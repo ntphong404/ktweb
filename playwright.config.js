@@ -2,18 +2,20 @@ const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  retries: 0,
+  workers: 1,
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
-    baseURL: 'https://ghtk.vn',
-    headless: false, // Run in headful mode so you can see what is happening
-    launchOptions: {
-      slowMo: 500, // Delay 500ms giữa các lệnh
-    },
+    baseURL: 'https://ttgshop.vn',
+    headless: false,
+    // launchOptions: {
+    //   slowMo: 500,
+    // },
+    actionTimeout: 10000,
+    navigationTimeout: 20000,
   },
 
   projects: [

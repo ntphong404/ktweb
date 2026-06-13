@@ -1,0 +1,143 @@
+ID,Tên Test Case,Dữ liệu đầu vào,Kết quả kỳ vọng,Kết quả thực tế,Mức độ lỗi
+,,,,,
+,,== CHỨC NĂNG 1: ĐĂNG KÝ TÀI KHOẢN - ttgshop.vn/dang-ky ==,,,
+TC_REG_01,Đăng ký thành công với dữ liệu hợp lệ (Happy Path),"Họ tên: Nguyen Van Test | SĐT: 0987654321 | Địa chỉ: 456 Phạm Văn Đồng Hà Nội | Email: test.ttg.xxx@gmail.com | MK: Playwright@2024",Đăng ký thành công - chuyển trang (về /dang-nhap hoặc trang chủ),Pass,N/A
+TC_REG_02,Submit form khi tất cả trường đều trống,Tất cả trường rỗng,Hiển thị validation cho tất cả trường bắt buộc - ở lại /dang-ky,Pass,N/A
+TC_REG_03,Họ và Tên chỉ 1 ký tự (dưới minlength=2),"Họ tên = ""A""",Hiển thị lỗi tên quá ngắn - ở lại /dang-ky,Pass,N/A
+TC_REG_04,Họ và Tên chỉ toàn khoảng trắng - SERVER phải từ chối (Bug hệ thống),"Họ tên = ""     "" (5 dấu cách) | [Bypass HTML5 validation]",Server từ chối - ở lại /dang-ky (server phải validate khoảng trắng),Pass,N/A
+TC_REG_05,Họ và Tên chứa chữ số - SERVER phải từ chối (Bug hệ thống),"Họ tên = ""Nguyen123"" | [Bypass HTML5 validation]",Server hiển thị lỗi tên không được chứa số,Fail,Medium
+TC_REG_06,Họ và Tên chứa ký tự đặc biệt @#$ - SERVER phải từ chối (Bug hệ thống),"Họ tên = ""Nguyen@#$"" | [Bypass HTML5 validation]",Server hiển thị lỗi tên không được chứa ký tự đặc biệt,Fail,Medium
+TC_REG_07,Họ và Tên quá dài 300 ký tự - SERVER phải từ chối (Bug hệ thống),"Họ tên = chuỗi 330 ký tự | [Bypass HTML5 validation]",Server hiển thị lỗi tên quá dài - không được submit,Fail,Low
+TC_REG_08,Họ và Tên chứa mã XSS - không được thực thi script (Security),"Họ tên = <script>alert(""XSS"")</script> | [Bypass HTML5 validation]","Form bị server chặn hoặc script được escape - JS không thực thi",Pass,N/A
+TC_REG_09,Số điện thoại chứa chữ cái,"SĐT = ""0912abc456""",Hiển thị lỗi SĐT không hợp lệ - ở lại /dang-ky,Pass,N/A
+TC_REG_10,Số điện thoại chứa ký tự đặc biệt,"SĐT = ""0912-345-678""",Hiển thị lỗi SĐT không hợp lệ - ở lại /dang-ky,Pass,N/A
+TC_REG_11,Số điện thoại quá ngắn (4 số),"SĐT = ""0912""",Hiển thị lỗi SĐT quá ngắn - ở lại /dang-ky,Pass,N/A
+TC_REG_12,Số điện thoại quá dài (20 số) - SERVER phải từ chối (Bug hệ thống),"SĐT = ""09876543210123456789"" | [Bypass HTML5 validation]",Server hiển thị lỗi SĐT quá dài,Pass,N/A
+TC_REG_13,Địa chỉ quá ngắn (7 ký tự - dưới minlength=8),"Địa chỉ = ""1234567""",Hiển thị lỗi địa chỉ quá ngắn - ở lại /dang-ky,Pass,N/A
+TC_REG_14,Địa chỉ chỉ chứa khoảng trắng (8 dấu cách) - SERVER phải từ chối (Bug hệ thống),"Địa chỉ = ""        "" (8 dấu cách) | [Bypass HTML5 validation]",Server hiển thị lỗi địa chỉ không hợp lệ (bypass minlength bằng khoảng trắng),Pass,N/A
+TC_REG_15,Địa chỉ cực dài 500 ký tự - SERVER phải từ chối (Bug hệ thống),"Địa chỉ = chuỗi 650 ký tự | [Bypass HTML5 validation]",Server hiển thị lỗi địa chỉ quá dài,Fail,Low
+TC_REG_16,"Email sai định dạng (abc@)","Email = ""abc@""",Hiển thị lỗi email không hợp lệ - ở lại /dang-ky,Pass,N/A
+TC_REG_17,Email không có ký tự @ (abcexample.com),"Email = ""abcexample.com""",Hiển thị lỗi email không hợp lệ - ở lại /dang-ky,Pass,N/A
+TC_REG_18,"Email có dấu chấm cuối tên miền (abc@example.)","Email = ""abc@example.""",Hiển thị lỗi email không hợp lệ - ở lại /dang-ky,Pass,N/A
+TC_REG_19,Email có khoảng trắng ở đầu - SERVER tự trim hoặc từ chối (Bug hệ thống),"Email = ""   test.ttg.xxx@gmail.com"" | [Bypass HTML5 validation]",Server tự trim khoảng trắng và đăng ký thành công,Pass,N/A
+TC_REG_20,Email có khoảng trắng ở cuối - SERVER tự trim hoặc từ chối (Bug hệ thống),"Email = ""test.ttg.xxx@gmail.com   "" | [Bypass HTML5 validation]",Server tự trim khoảng trắng và đăng ký thành công,Pass,N/A
+TC_REG_21,Email đã tồn tại trong hệ thống (Bug hệ thống),Email đã đăng ký trước đó,Hiển thị thông báo email đã tồn tại - không tạo tài khoản trùng,Pass,N/A
+TC_REG_22,Email quá dài (255+ ký tự) - SERVER phải từ chối (Bug hệ thống),"Email = 240 ký tự 'a' + ""@gmail.com"" | [Bypass HTML5 validation]",Server hiển thị lỗi email quá dài,Fail,Low
+TC_REG_23,Mật khẩu chỉ 1 ký tự,"MK = ""a""",Hiển thị lỗi mật khẩu quá ngắn - ở lại /dang-ky,Pass,N/A
+TC_REG_24,Mật khẩu quá dài 300 ký tự - SERVER phải từ chối (Bug hệ thống),"MK = ""Pw@"" + 297 ký tự (tổng 300) | [Bypass HTML5 validation]",Server hiển thị lỗi mật khẩu quá dài,Pass,N/A
+TC_REG_25,Nhập lại mật khẩu không khớp,"MK: Playwright@2024 / Nhập lại: KhacNhau@2024",Hiển thị lỗi mật khẩu không khớp - ở lại /dang-ky,Pass,N/A
+TC_REG_26,Double-click nút ĐĂNG KÝ - chỉ được tạo 1 tài khoản (Bug hệ thống),Nhấn đúp nút ĐĂNG KÝ liên tiếp với email hợp lệ mới,Chỉ tạo 1 tài khoản - không crash - URL không chứa error/500,Pass,N/A
+TC_REG_27,Sau đăng ký thành công phải chuyển về /dang-nhap (Bug hệ thống),Đăng ký hoàn tất với email hợp lệ,Chuyển đến trang /dang-nhap để đăng nhập,Pass,N/A
+TC_REG_28,Địa chỉ chứa mã XSS - không được thực thi script (Security),"Địa chỉ = <script>alert(""XSS_ADDR"")</script> Phạm Văn Đồng | [Bypass HTML5 validation]","Server từ chối hoặc script được escape khi hiển thị - JS không thực thi",Pass,N/A
+,,,,,
+,Pass: 23 / 28,,,,
+,Fail: 5 / 28,,,,
+,"(Bug server-side: 05, 06, 07, 15, 22)",,,,
+,,,,,
+,,== CHỨC NĂNG 2: ĐĂNG NHẬP TÀI KHOẢN - ttgshop.vn/dang-nhap ==,,,
+TC_LG_01,Link Đăng ký tài khoản dẫn đến /dang-ky,Click link Đăng ký tài khoản,Chuyển đến trang /dang-ky,Pass,N/A
+TC_LG_02,Link Quên mật khẩu? dẫn đến /quen-mat-khau,Click link Quên mật khẩu?,Chuyển đến trang /quen-mat-khau,Pass,N/A
+TC_LG_03,Đăng nhập thành công với thông tin hợp lệ (Happy Path),"Email: test.playwright.ttg@gmail.com | MK: Playwright@2024",Đăng nhập thành công - rời khỏi trang /dang-nhap,Pass,N/A
+TC_LG_04,Sau đăng nhập thành công phải chuyển về trang chủ,"Email/MK hợp lệ",Chuyển đến trang chủ hoặc trang /taikhoan,Pass,N/A
+TC_LG_05,Đăng nhập với mật khẩu sai - phải thông báo lỗi,"Email đúng | MK: SaiMatKhau@9999",Thông báo sai mật khẩu - ở lại /dang-nhap,Pass,N/A
+TC_LG_06,Đăng nhập với email không tồn tại - phải thông báo lỗi,"Email: khongtontai.xyz.99999@gmail.com | MK hợp lệ",Thông báo email không tồn tại - ở lại /dang-nhap,Pass,N/A
+TC_LG_07,Submit form khi để trống Email,Email = rỗng | MK hợp lệ,Hiển thị validation trường Email - ở lại /dang-nhap,Pass,N/A
+TC_LG_08,Submit form khi để trống Mật khẩu,Email hợp lệ | MK = rỗng,Hiển thị validation trường Mật khẩu - ở lại /dang-nhap,Pass,N/A
+TC_LG_09,Submit form khi để trống cả Email và Mật khẩu,Tất cả trống,Hiển thị validation - ở lại /dang-nhap,Pass,N/A
+TC_LG_10,Email sai định dạng (không có đuôi domain hợp lệ),"Email = ""emailkhongco@sign"" | MK hợp lệ",Hiển thị lỗi email không hợp lệ - ở lại /dang-nhap,Pass,N/A
+TC_LG_11,Email chữ HOA/chữ thường - đăng nhập được (case-insensitive),"Email = ""TEST.PLAYWRIGHT.TTG@GMAIL.COM""",Đăng nhập thành công (email không phân biệt hoa thường),Pass,N/A
+TC_LG_12,Mật khẩu phân biệt chữ HOA/thường - THẤT BẠI khi sai case,"Email đúng | MK = PLAYWRIGHT@2024 (đổi thường thành HOA)",Thông báo sai mật khẩu - ở lại /dang-nhap,Pass,N/A
+TC_LG_13,Email có khoảng trắng đầu - SERVER tự trim và đăng nhập được (Bug hệ thống),"Email = ""   test.playwright.ttg@gmail.com"" | [Bypass HTML5 validation]",Server tự trim khoảng trắng và đăng nhập thành công,Pass,N/A
+TC_LG_14,Email có khoảng trắng cuối - SERVER tự trim và đăng nhập được (Bug hệ thống),"Email = ""test.playwright.ttg@gmail.com   "" | [Bypass HTML5 validation]",Server tự trim khoảng trắng và đăng nhập thành công,Pass,N/A
+TC_LG_15,Mật khẩu cực dài 300 ký tự - SERVER không được crash (Bug hệ thống),"MK = P@ + 298 ký tự (tổng 300) | [Bypass HTML5 validation]",Thông báo sai mật khẩu - không crash / không lỗi 500,Pass,N/A
+TC_LG_16,SQL Injection trong trường Mật khẩu - phải bị chặn (Security),"MK = ""; DROP TABLE users; --"" | [Bypass HTML5 validation]",Server chặn - không được đăng nhập,Pass,N/A
+TC_LG_17,XSS trong trường Email - không được thực thi script (Security),"Email = <script>alert(""XSS"")</script>@x.com (nhúng XSS vào local-part để qua JS validator)",Script không được thực thi - nội dung trang an toàn,Pass,N/A
+TC_LG_18,Nút hiển thị/ẩn mật khẩu hoạt động đúng,Click checkbox Hiển thị mật khẩu,Ô mật khẩu chuyển từ type=password sang type=text,Pass,N/A
+TC_LG_19,Đăng xuất thành công - chuyển về trang chủ,Đăng nhập xong → click nút Đăng xuất → xác nhận,Chuyển về trang chủ hoặc /dang-nhap - session bị xóa,Pass,N/A
+TC_LG_20,Sau đăng nhập - truy cập lại /dang-nhap phải redirect (Bug hệ thống),Đã đăng nhập → truy cập /dang-nhap,Redirect về trang chủ - không hiển thị lại form đăng nhập,Fail,Medium
+TC_LG_21,Truy cập /taikhoan khi chưa đăng nhập - phải redirect về /dang-nhap,Truy cập thẳng /taikhoan khi chưa login,Redirect về /dang-nhap,Pass,N/A
+TC_LG_22,Đăng nhập sai 5 lần liên tiếp - kiểm tra chống brute force (Bug hệ thống),"5 lần sai → thử lại đúng mật khẩu","Hệ thống khóa tài khoản hoặc yêu cầu CAPTCHA - lần thử đúng vẫn bị chặn",Fail,High
+,,,,,
+,Pass: 20 / 22,,,,
+,Fail: 2 / 22,,,,
+,"(Bug: 20, 22)",,,,
+,,,,,
+,,== CHỨC NĂNG 3: TÌM KIẾM & LỌC SẢN PHẨM - ttgshop.vn/tim ==,,,
+TC_SRC_01,"Tìm kiếm từ khóa hợp lệ ""PC gaming"" - phải trả về kết quả","Từ khóa: ""PC gaming""",Hiển thị danh sách sản phẩm PC gaming - ít nhất 1 kết quả,Pass,N/A
+TC_SRC_02,"Tìm kiếm chữ HOA ""PC GAMING"" - kết quả giống chữ thường (case-insensitive)","Từ khóa: ""PC GAMING""","Hiển thị kết quả giống tìm kiếm với ""PC gaming""",Pass,N/A
+TC_SRC_03,"Tìm kiếm có khoảng trắng đầu ""   PC gaming"" - phải tự trim","Từ khóa: ""   PC gaming""",Tự trim và hiển thị kết quả đúng chứa PC gaming,Pass,N/A
+TC_SRC_04,"Tìm kiếm có khoảng trắng cuối ""PC gaming   "" - phải tự trim","Từ khóa: ""PC gaming   """,Tự trim và hiển thị kết quả đúng chứa PC gaming,Pass,N/A
+TC_SRC_05,"Tìm kiếm theo model sản phẩm ""RTX 3050"" - phải có kết quả","Từ khóa: ""RTX 3050""",Hiển thị sản phẩm có card đồ họa RTX 3050,Pass,N/A
+TC_SRC_06,Kết quả tìm kiếm hiển thị đúng tên và giá sản phẩm,"Từ khóa: ""màn hình""",Mỗi sản phẩm hiển thị tên và giá đúng định dạng,Pass,N/A
+TC_SRC_07,Tìm kiếm từ khóa không tồn tại - phải hiển thị thông báo,"Từ khóa: ""xyz123khongcosanpham""",Hiển thị thông báo Không tìm thấy sản phẩm phù hợp,Pass,N/A
+TC_SRC_08,"Tìm kiếm sai chính tả ""gamng"" - phải hiển thị không có kết quả","Từ khóa: ""gamng""",Hiển thị không có kết quả hoặc gợi ý từ khóa đúng,Pass,N/A
+TC_SRC_09,Tìm kiếm chỉ toàn khoảng trắng (Bug hệ thống),"Từ khóa: ""          "" (10 dấu cách)","Hiển thị validation hoặc 0 sản phẩm - không được trả về toàn bộ catalog",Pass,N/A
+TC_SRC_10,Ô tìm kiếm trống khi bấm tìm (Bug hệ thống),Không nhập gì - bấm nút tìm luôn,Hiển thị thông báo nhập từ khóa - không điều hướng sang /tim,Fail,Medium
+TC_SRC_11,"Tìm kiếm với ký tự đặc biệt ""@@@###"" - phải xử lý bình thường","Từ khóa: ""@@@###""","Hiển thị Không tìm thấy sản phẩm - không crash, không lỗi",Pass,N/A
+TC_SRC_12,Tìm kiếm chuỗi cực dài 500 ký tự - hệ thống không được crash (Bug hệ thống),"Từ khóa: 500 ký tự (""PC gaming "" lặp lại 50 lần)",Hệ thống xử lý bình thường - không lỗi 500 / không crash,Pass,N/A
+TC_SRC_13,"Tìm kiếm 1 ký tự ""a"" - phải trả về kết quả hoặc thông báo không có","Từ khóa: ""a""",Hiển thị sản phẩm chứa chữ a hoặc thông báo không có kết quả,Pass,N/A
+TC_SRC_14,"Tìm kiếm 1 ký tự ""i"" - phải trả về sản phẩm Intel/i3/i5 (Bug hệ thống)","Từ khóa: ""i""","Hiển thị sản phẩm chứa chữ ""i"" (Intel, i3, i5, i7...)",Pass,N/A
+TC_SRC_15,"Tìm kiếm tiếng Việt có dấu ""máy tính"" - phải có kết quả","Từ khóa: ""máy tính""",Hiển thị sản phẩm máy tính,Pass,N/A
+TC_SRC_16,"Tìm kiếm tiếng Việt không dấu ""may tinh"" (Bug hệ thống)","Từ khóa: ""may tinh""","Hiển thị sản phẩm máy tính (hệ thống phải hỗ trợ tìm không dấu)",Pass,N/A
+TC_SRC_17,"Tìm kiếm tiếng Việt viết HOA ""MÁY TÍNH"" - phải trả về kết quả (case-insensitive)","Từ khóa: ""MÁY TÍNH""",Hiển thị kết quả giống tìm kiếm chữ thường,Pass,N/A
+TC_SRC_18,"Tìm kiếm tiếng Việt có khoảng trắng đầu cuối ""  máy tính  "" - phải trim","Từ khóa: ""  máy tính  """,Tự trim và hiển thị kết quả đúng,Pass,N/A
+TC_SRC_19,XSS trong ô tìm kiếm - không được thực thi script (Security),"Từ khóa: <script>alert('XSS')</script>","Kết quả không chứa script thực thi - trang an toàn",Pass,N/A
+TC_SRC_20,SQL Injection trong ô tìm kiếm - không được lộ dữ liệu (Security),"Từ khóa: "" ' OR '1'='1' --""",Không trả về toàn bộ database - số kết quả < 200,Pass,N/A
+TC_SRC_21,URL sau tìm kiếm không lộ query nội bộ (Bug hệ thống),"Từ khóa: ""PC gaming""","URL dạng /tim?q=... - không chứa undefined / null / [object",Pass,N/A
+TC_SRC_22,Kết quả tìm kiếm không hiển thị lỗi hệ thống thô (Bug hệ thống),"Từ khóa: ""PC gaming""","Không hiển thị undefined / [object Object] / SyntaxError / Liquid error",Pass,N/A
+TC_SRC_23,Tìm kiếm hoạt động từ trang danh mục PC (/pc),"Từ khóa: ""PC gaming"" (nhập từ trang /pc)",Chuyển đến /tim và hiển thị kết quả đúng,Pass,N/A
+TC_SRC_24,Tìm kiếm hoạt động từ trang đăng nhập,"Từ khóa: ""PC gaming"" (nhập từ trang /dang-nhap)",Chuyển đến /tim và hiển thị kết quả đúng,Pass,N/A
+TC_SRC_25,"Tìm kiếm số điện thoại ""0986552233"" - không trả về sản phẩm","Từ khóa: ""0986552233""",Hiển thị Không tìm thấy sản phẩm - không crash,Pass,N/A
+TC_SRC_26,URL filter - giá âm min=-1000000 - hệ thống không được crash (Bug hệ thống),Truy cập /pc?min=-1000000&max=15000000 trực tiếp qua URL,"0 kết quả hoặc bỏ qua filter không hợp lệ - không lỗi 500, không undefined",Pass,N/A
+TC_SRC_27,URL filter - min > max (khoảng giá đảo ngược) - xử lý gracefully (Bug hệ thống),Truy cập /pc?min=15000000&max=5000000 trực tiếp qua URL,"0 kết quả hoặc bỏ qua filter - không crash, không Liquid error",Pass,N/A
+TC_SRC_28,URL filter - khoảng giá bằng 0 (min=0&max=0) (Bug hệ thống),Truy cập /pc?min=0&max=0 trực tiếp qua URL,"0 kết quả hoặc bỏ qua filter - không crash, không lỗi server",Pass,N/A
+TC_SRC_29,URL filter - giá cực lớn max=9999999999999 - không bị tràn số (Bug hệ thống),Truy cập /pc?min=0&max=9999999999999 trực tiếp qua URL,"Hiển thị sản phẩm hoặc bỏ qua max - không crash, không Infinity",Pass,N/A
+TC_SRC_30,URL filter - giá không phải số min=abc&max=xyz (Bug hệ thống),Truy cập /pc?min=abc&max=xyz trực tiếp qua URL,"Bỏ qua filter không hợp lệ - không crash, không NaN, không Liquid error",Pass,N/A
+TC_SRC_31,URL filter - filter ID không tồn tại filter=999999 (Bug hệ thống),Truy cập /pc?filter=999999 trực tiếp qua URL,"0 kết quả hoặc bỏ qua filter ID không tồn tại - không crash, không undefined",Pass,N/A
+TC_SRC_32,XSS trong tham số URL filter - không được thực thi script (Security),"Truy cập /pc?min=<script>alert(""XSS_FILTER"")</script> (encoded)",Script không được render hay thực thi trong response - trang an toàn,Pass,N/A
+,,,,,
+,Pass: 31 / 32,,,,
+,Fail: 1 / 32,,,,
+,(Bug tìm kiếm: 10),,,,
+,,,,,
+,,== CHỨC NĂNG 4: QUẢN LÝ GIỎ HÀNG - ttgshop.vn/cart ==,,,
+,,Sản phẩm test: Màn hình Lenovo L27q-4A (27 inch IPS 2K 100Hz),,,,
+TC_CART_01,Truy cập trang giỏ hàng /cart - trang hiển thị đúng,Truy cập /cart,Trang load bình thường - không lỗi 404/500,Pass,N/A
+TC_CART_02,Click icon Giỏ hàng trên header - chuyển đến /cart,Click icon giỏ hàng trên header,Chuyển đến /cart,Pass,N/A
+TC_CART_03,Giỏ hàng trống - hiển thị UI phù hợp,Vào /cart khi chưa thêm sản phẩm nào,"Hiển thị thông báo giỏ hàng trống hoặc giao diện phù hợp (nút Tiếp tục mua hàng, v.v.)",Pass,N/A
+TC_CART_04,Thêm sản phẩm vào giỏ từ trang chi tiết (Happy Path),Click THÊM VÀO GIỎ từ trang sản phẩm Lenovo L27q-4A,Sản phẩm xuất hiện trong giỏ hàng khi vào /cart,Pass,N/A
+TC_CART_05,Thêm sản phẩm với số lượng ban đầu là 2,"Nhập SL = 2 rồi click THÊM VÀO GIỎ",Giỏ hàng hiển thị sản phẩm với số lượng = 2,Pass,N/A
+TC_CART_06,Thêm cùng sản phẩm 2 lần - phải cộng dồn số lượng (không tạo 2 dòng) (Bug hệ thống),Thêm cùng 1 sản phẩm 2 lần,Giỏ hàng chỉ có 1 dòng - số lượng = 2 (cộng dồn),Fail,Medium
+TC_CART_07,Nút tăng (+) số lượng trên trang sản phẩm hoạt động,Click nút + trên trang sản phẩm khi SL đang là 1,Số lượng tăng từ 1 lên 2,Pass,N/A
+TC_CART_08,Nút giảm (-) không cho phép giảm dưới 1,Click nút - khi SL đang là 1,Số lượng giữ nguyên = 1 (không cho phép SL < 1),Pass,N/A
+TC_CART_09,Tăng số lượng trong giỏ bằng nút (+) - tổng tiền cập nhật,Click nút + trong giỏ hàng,Số lượng tăng và tổng tiền cập nhật tương ứng,Pass,N/A
+TC_CART_10,Nhập số lượng 0 trực tiếp vào ô số lượng trong giỏ (Bug hệ thống),"Nhập ""0"" vào ô số lượng - nhấn Tab",Reset về 1 hoặc xóa sản phẩm - không cho phép SL = 0,Pass,N/A
+TC_CART_11,Nhập số lượng âm -1 vào ô số lượng trong giỏ (Bug hệ thống),"Nhập ""-1"" vào ô số lượng - nhấn Tab",Reset về 1 - tổng tiền không âm,Pass,N/A
+TC_CART_12,Ô số lượng trong giỏ là type=number - tự chặn chữ cái ở browser level (Bug hệ thống),Kiểm tra attribute type của ô số lượng trong giỏ hàng,Ô phải có type=number - browser tự chặn chữ cái - tổng tiền không hiển thị NaN,Pass,N/A
+TC_CART_13,"Nhập 9999 vượt tồn kho - phải validate NGAY tại ô nhập, không reset silently ở checkout (Bug hệ thống)",Nhập SL = 9999 vào ô số lượng trong giỏ - nhấn Tab,"Hệ thống giới hạn về tồn kho ngay tại ô nhập (không chờ đến checkout mới reset về 1 mà không báo lỗi)",Fail,Medium
+TC_CART_14,Xóa sản phẩm khỏi giỏ hàng,Click nút X/Xóa trên dòng sản phẩm,Sản phẩm bị xóa - giỏ hàng trống,Pass,N/A
+TC_CART_15,Double-click nút xóa sản phẩm - không crash JS (Bug hệ thống),Nhấn đúp chuột vào nút Xóa,Sản phẩm xóa bình thường - không crash/đơ trang,Pass,N/A
+TC_CART_16,Tổng tiền hiển thị đúng định dạng tiền tệ VNĐ,Vào /cart sau khi thêm sản phẩm,Tổng tiền hiển thị dạng số có đơn vị VNĐ hoặc đ,Pass,N/A
+TC_CART_17,Badge số lượng trên icon giỏ hàng (header) cập nhật sau khi thêm,Thêm sản phẩm vào giỏ,Số hiển thị trên icon giỏ hàng tăng lên,Pass,N/A
+TC_CART_18,Dữ liệu giỏ hàng vẫn còn sau khi tải lại trang (F5),Reload trang /cart sau khi thêm sản phẩm,Sản phẩm vẫn còn trong giỏ - không bị mất,Pass,N/A
+TC_CART_19,Giao diện giỏ hàng không hiển thị lỗi hệ thống thô (Bug hệ thống),Kiểm tra nội dung text trên trang /cart,"Không hiển thị undefined / [object Object] / SyntaxError / TypeError",Pass,N/A
+TC_CART_20,Ô số lượng trong giỏ có aria-label cho Accessibility (Bug hệ thống),Kiểm tra thuộc tính ô nhập số lượng,Ô số lượng có aria-label hoặc label tương ứng,Fail,Medium
+TC_CART_21,Click ĐẶT HÀNG từ trang sản phẩm - chuyển đến giỏ/thanh toán,Click nút ĐẶT HÀNG màu đỏ,Chuyển đến /cart hoặc trang thanh toán,Pass,N/A
+TC_CART_22,Nhập ghi chú đơn hàng trong giỏ hàng,Nhập ghi chú vào ô Note trong /cart,Ghi chú được lưu vào ô note,Pass,N/A
+TC_CART_23,Truy cập /cart khi chưa đăng nhập (Guest cart),Truy cập /cart khi chưa login,Trang /cart hiển thị bình thường cho guest - không redirect về /dang-nhap,Pass,N/A
+TC_CART_24,Thêm sản phẩm với số lượng 0 từ trang sản phẩm (Bug hệ thống),"Nhập SL = 0 → click THÊM VÀO GIỎ",Hệ thống từ chối hoặc đặt SL về 1 - không thêm SL = 0 vào giỏ,Pass,N/A
+TC_CART_25,Ô số lượng trên trang sản phẩm là type=number - tự chặn chữ cái - thêm vào giỏ không crash (Bug hệ thống),Kiểm tra attribute type của ô SL trên trang sản phẩm rồi click THÊM VÀO GIỎ,Ô phải có type=number - thêm vào giỏ không crash,Pass,N/A
+,,,,,
+,Pass: 22 / 25,,,,
+,Fail: 3 / 25,,,,
+,"(Bug: 06, 13, 20)",,,,
+,,,,,
+,,== TỔNG HỢP TOÀN BỘ ==,,,
+,Tổng TC: 107 (28 Đăng ký + 22 Đăng nhập + 32 Tìm kiếm + 25 Giỏ hàng),,,,
+,Pass: 96 / 107 (90%),,,,
+,Fail: 11 / 107 (10%),,,,
+,"(Fail: 5 Đăng ký + 2 Đăng nhập + 1 Tìm kiếm + 3 Giỏ hàng = 11 bugs)",,,,
+,,,,,
+,,== GHI CHÚ KỸ THUẬT ==,,,
+,"[Bypass HTML5 validation]: Dùng page.evaluate() xóa required/minlength/maxlength/pattern/type=""email"" trước khi submit để kiểm tra server-side validation","Hàm: stripHtmlValidation(page) - có trong register.spec.js và login.spec.js",,,,
+,Nhóm URL filter bypass (TC_SRC_26-32): Thao tác trực tiếp URL thay vì dùng UI - kiểm tra server xử lý tham số bất hợp lệ,,,,,
