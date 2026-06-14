@@ -4,16 +4,18 @@ module.exports = defineConfig({
   testDir: './tests',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  retries: 0,
+  retries: 1,
   workers: 1,
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video: 'on-first-retry',
     baseURL: 'https://ttgshop.vn',
     headless: false,
-    // launchOptions: {
-    //   slowMo: 500,
-    // },
+    launchOptions: {
+      slowMo: 500,
+    },
     actionTimeout: 10000,
     navigationTimeout: 20000,
   },
